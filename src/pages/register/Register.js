@@ -158,20 +158,6 @@ const Register = () => {
                             })
                         }
                     }
-                    // Swal.fire({
-                    //     title: "สมาชิกสำเร็จ",
-                    //     text: "กรุณาสมัครสมาชิก",
-                    //     icon: "success",
-                    //     showCancelButton: true,
-                    //     confirmButtonColor: "#A5DC86",
-                    //     cancelButtonColor: "#F27474",
-                    //     confirmButtonText: "ใช่, ไปหน้าสมัครสมาชิก",
-                    //     cancelButtonText: "ไม่, เปลี่ยนบัตรสมาชิกใหม่"
-                    // }).then((result) => {
-                    //     if(result.isConfirmed){
-                    //         navigate('/register')
-                    //     }
-                    // });
                 }
             }catch(error){
                 if(error.response.status === 404){
