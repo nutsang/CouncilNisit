@@ -1,13 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import TopUp from './pages/topup/TopUp';
+import Profile from './pages/profile/Profile';
+import Register from './pages/register/Register';
+import WaitingCard from './pages/wating-card/WaitingCard'
+import RedeemReward from './pages/redeem-reward/RedeemReward';
 import reportWebVitals from './reportWebVitals';
 
+document.body.className = 'font-Kanit'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route index path='/' element={<WaitingCard />}/>
+        <Route exact path='/register' element={<Register />}/>
+        <Route exact path='/profile' element={<Profile />}/>
+        <Route exact path='/topup' element={<TopUp />}/>
+        <Route exact path='/redeem-reward' element={<RedeemReward />}/>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
