@@ -5,24 +5,9 @@ import axios from 'axios';
 
 const WaitingCard = () => {
     const navigate = useNavigate()
-    // Swal.fire({
-    //     title: "ข้อมูลบัตรสมาชิกไม่ถูกต้อง",
-    //     text: "กรุณาสมัครสมาชิก",
-    //     icon: "error",
-    //     showCancelButton: true,
-    //     confirmButtonColor: "#3085d6",
-    //     cancelButtonColor: "#d33",
-    //     confirmButtonText: "ใช่, ไปหน้าสมัครสมาชิก",
-    //     cancelButtonText: "ไม่, เปลี่ยนบัตรสมาชิก"
-    // }).then((result) => {
-    //     if(result.isConfirmed){
-    //         navigate('/register')
-    //     }
-    // });
     const handleSubmit = async () => {
         try{
             const response = await axios.get(`${process.env.REACT_APP_API}verify-member`)
-            console.log(response.data)
             if(response.data.status){
                 Swal.fire({
                     title: response.data.message,
