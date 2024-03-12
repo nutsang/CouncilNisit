@@ -34,6 +34,15 @@ const WaitingCard = () => {
                 });
             }
         }catch(error){
+            if(error && error.response.status !== 404){
+                Swal.fire({
+                    title: error.response.data.message,
+                    text: "ขออภัยในความไม่สะดวก",
+                    icon: "error",
+                    confirmButtonColor: "#A5DC86",
+                    confirmButtonText: "รับทราบ",
+                })
+            }
             if(error.response.status === 404){
                 Swal.fire({
                     title: error.response.data.message,
