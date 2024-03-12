@@ -1,7 +1,7 @@
-import MetaHeader from '../../components/meta-header/MetaHeader';
+import MetaHeader from '../../components/meta-header/MetaHeader'
 import { Link, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import axios from 'axios';
+import axios from 'axios'
 
 const Profile = () => {
     const navigate = useNavigate()
@@ -33,7 +33,7 @@ const Profile = () => {
                         <h1 className={`text-nowrap text-xs sm:text-sm lg:text-lg xl:text-4xl bg-gradient-to-r from-[#ba0a0a] to-[#f22929] inline-block text-transparent bg-clip-text`}>ข้อมูลส่วนตัว</h1>
                     </div>
                 </div>
-                <div className='w-full text-[#FFFFFF] text-3xl my-4'>รหัสบัตรสมาชิก: {`${account.cardID}`}</div>
+                {/* <div className='w-full text-[#FFFFFF] text-3xl my-4'>รหัสบัตรสมาชิก: {`${account.cardID}`}</div> */}
                 <div className='w-full text-[#FFFFFF] text-3xl my-4'>รหัสนิสิต: {`${account.studentId}`}</div>
                 <div className='w-full text-[#FFFFFF] text-3xl my-4'>ชื่อ: {`${account.studentName}`}</div>
                 <div className='w-full text-[#FFFFFF] text-3xl my-4'>นามสกุล: {`${account.studentLastName}`}</div>
